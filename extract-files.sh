@@ -17,7 +17,7 @@
 set -e
 
 VENDOR=motorola
-DEVICE=def
+DEVICE=doha
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -52,6 +52,5 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$OMNI_ROOT"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
-extract "$MY_DIR"/proprietary-files-product.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh

@@ -21,8 +21,5 @@ else
 TARGET_SYSTEM_PROP += build/make/target/board/gsi_system_user.prop
 endif
 
-# Setup a vendor image to let PRODUCT_PROPERTY_OVERRIDES does not affect GSI
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-
 # Disable 64 bit mediadrmserver
 TARGET_ENABLE_MEDIADRM_64 := true

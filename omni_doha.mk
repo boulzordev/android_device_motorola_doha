@@ -19,6 +19,8 @@
 # product configuration (apps).
 #
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+
 VENDOR_EXCEPTION_PATHS := omni \
     motorola \
     gapps \
@@ -34,62 +36,39 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_BUILD_PRODUCT_IMAGE  := true
+PRODUCT_BUILD_CACHE_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := false
+PRODUCT_BUILD_PRODUCT_IMAGE  := false
+PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
+PRODUCT_BUILD_RAMDISK_IMAGE := false
+PRODUCT_BUILD_SYSTEM_IMAGE := true
+PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
+PRODUCT_BUILD_USERDATA_IMAGE := false
+PRODUCT_BUILD_VENDOR_IMAGE := false
 
-BOARD_SUPER_PARTITION_SIZE := 9730785280
-BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9730785280
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
-    system \
-    product
-
-# tell update_engine to not change dynamic partition table during updates
-# needed since our qti_dynamic_partitions does not include
-# vendor and odm and we also dont want to AB update them
-TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
-
-# enable to generate super_empy.img if needed to wipe super partition table
-#BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST += \
-    vendor
-
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 209715200
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 209715200
-BOARD_EXT4_SHARE_DUP_BLOCKS := true
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-
-PRODUCT_BUILD_RAMDISK_IMAGE := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 TARGET_NO_RECOVERY := false
-#BOARD_INCLUDE_RECOVERY_DTBO = true
-BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE := false
-BOARD_USES_RECOVERY_AS_BOOT := false
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/def/overlay/device
+DEVICE_PACKAGE_OVERLAYS += device/motorola/doha/overlay/device
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # get the rest of aosp stuff after ours
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/motorola/def/device.mk)
-
-PRODUCT_SHIPPING_API_LEVEL := 29
+$(call inherit-product, device/motorola/doha/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_def
-PRODUCT_DEVICE := def
+PRODUCT_NAME := omni_doha
+PRODUCT_DEVICE := doha
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_MODEL := motorola one hyper
@@ -97,16 +76,16 @@ PRODUCT_MODEL := motorola one hyper
 TARGET_DEVICE := MotoOneHyper
 PRODUCT_SYSTEM_NAME := MotoOneHyper
 
-VENDOR_RELEASE := 10/QPF30.103-21-1/3932d:user/release-keys
-BUILD_FINGERPRINT := motorola/def_retail/def:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := motorola/def_retail/def:$(VENDOR_RELEASE)
-OMNI_PRIVATE_BUILD_DESC := "'def_retail-user 10 QPF30.103-21-1 3932d release-keys'"
+VENDOR_RELEASE := 9/PPIS29.65-24-2/dc7f7b:user/release-keys
+BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
+OMNI_BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
+OMNI_PRIVATE_BUILD_DESC := "'doha_retail-user 10 PPIS29.65-24-2 dc7f7b release-keys'"
 
-PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-10-05
+PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-11-01
 
 TARGET_VENDOR := motorola
 
-$(call inherit-product, vendor/motorola/def/def-vendor.mk)
+$(call inherit-product, vendor/motorola/doha/doha-vendor.mk)
 
 ifeq ($(WITH_GAPPS),true)
 # https://gitlab.com/darkobas/android_vendor_gapps

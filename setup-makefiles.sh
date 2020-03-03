@@ -17,7 +17,7 @@
 set -e
 
 VENDOR=motorola
-DEVICE=def
+DEVICE=doha
 
 INITIAL_COPYRIGHT_YEAR=2020
 
@@ -42,7 +42,6 @@ write_headers
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
-write_makefiles "$MY_DIR"/proprietary-files-product.txt true
 
 # Finish
 write_footers
