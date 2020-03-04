@@ -69,10 +69,12 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r328903
 NEED_KERNEL_MODULE_VENDOR_OVERLAY := true
 
-#BOARD_ROOT_EXTRA_FOLDERS += firmware firmware/radio persist bt_firmware
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/lib/dsp:/dsp
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt/image:/firmware/image
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt/verinfo:/firmware/verinfo
+BOARD_ROOT_EXTRA_FOLDERS := odm
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist \
+    /vendor/bt_firmware:/bt_firmware \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3238002688
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
