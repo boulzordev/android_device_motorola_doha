@@ -32,3 +32,11 @@ service vendor.mbm_spy /system/bin/true
     disabled
     oneshot
     override
+
+service vendor.sensors /system/bin/true
+    class core
+    user system
+    group system
+    disabled
+    oneshot
+    override
