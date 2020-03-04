@@ -71,9 +71,11 @@
     <bool name="config_displayBlanksAfterDoze">false</bool>
     <bool name="skip_restoring_network_selection">true</bool>
     <dimen name="config_viewConfigurationTouchSlop">16dp</dimen>
-    <dimen name="status_bar_height">72.5px</dimen>
+    <dimen name="status_bar_height">80px</dimen>
     <dimen name="status_bar_height_landscape">24dp</dimen>
     <dimen name="status_bar_height_portrait">24dp</dimen>
+
+    <string name="config_mainBuiltInDisplayCutout">M -85,0 L -84,72.5 L 85,72.5 L 85,0 Z</string>
 
     <integer name="config_multiuserMaximumUsers">4</integer>
 
