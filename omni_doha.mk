@@ -71,10 +71,10 @@ PRODUCT_NAME := omni_doha
 PRODUCT_DEVICE := doha
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := motorola one hyper
+PRODUCT_MODEL := moto g8 plus
 
-TARGET_DEVICE := MotoOneHyper
-PRODUCT_SYSTEM_NAME := MotoOneHyper
+TARGET_DEVICE := Moto G8 Plus
+PRODUCT_SYSTEM_NAME := Moto G8 Plus
 
 VENDOR_RELEASE := 9/PPIS29.65-24-2/dc7f7b:user/release-keys
 BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
