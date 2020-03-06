@@ -36,19 +36,7 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_BUILD_CACHE_IMAGE := false
-PRODUCT_BUILD_ODM_IMAGE := false
-PRODUCT_BUILD_PRODUCT_IMAGE  := false
-PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
-PRODUCT_BUILD_RAMDISK_IMAGE := false
-PRODUCT_BUILD_SYSTEM_IMAGE := true
-PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
-PRODUCT_BUILD_USERDATA_IMAGE := false
-PRODUCT_BUILD_VENDOR_IMAGE := false
-
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-TARGET_NO_RECOVERY := false
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080p
