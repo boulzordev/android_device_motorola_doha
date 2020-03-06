@@ -424,7 +424,6 @@ lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 #-framework/com.nxp.nfc.jar
 
 #-framework/WfdCommon.jar
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 
 -app/MotoSignatureApp/MotoSignatureApp.apk
 etc/NT36xxx_MP_Setting_Criteria_600F.csv
