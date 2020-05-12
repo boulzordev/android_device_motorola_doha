@@ -31,7 +31,7 @@ VENDOR_EXCEPTION_PATHS := omni \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/aosp/config/gsm.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -43,10 +43,10 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
 DEVICE_PACKAGE_OVERLAYS += device/motorola/doha/overlay/device
-DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+DEVICE_PACKAGE_OVERLAYS += vendor/aosp/overlay/CarrierConfig
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # get the rest of aosp stuff after ours
 # $(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
@@ -55,7 +55,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/motorola/doha/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_doha
+PRODUCT_NAME := aosp_doha
 PRODUCT_DEVICE := doha
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
@@ -69,7 +69,7 @@ BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
 OMNI_BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
 OMNI_PRIVATE_BUILD_DESC := "'doha_retail-user 10 PPIS29.65-24-2 dc7f7b release-keys'"
 
-PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-11-01
+#PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-11-01
 
 TARGET_VENDOR := motorola
 
@@ -85,3 +85,4 @@ ifeq ($(WITH_MICROG),true)
 $(call inherit-product, vendor/microg/microg.mk)
 endif
 
+#Build with No-Gapps
