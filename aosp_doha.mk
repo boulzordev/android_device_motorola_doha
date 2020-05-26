@@ -85,4 +85,5 @@ ifeq ($(WITH_MICROG),true)
 $(call inherit-product, vendor/microg/microg.mk)
 endif
 
-#Build with No-Gapps
+#Architecture Gapps
+TARGET_GAPPS_ARCH := arm64
