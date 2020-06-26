@@ -21,7 +21,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-VENDOR_EXCEPTION_PATHS := omni \
+#VENDOR_EXCEPTION_PATHS := omni \
     motorola \
     gapps \
     microg
@@ -66,8 +66,8 @@ PRODUCT_SYSTEM_NAME := Moto G8 Plus
 
 VENDOR_RELEASE := 9/PPIS29.65-24-2/dc7f7b:user/release-keys
 BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
-OMNI_PRIVATE_BUILD_DESC := "'doha_retail-user 10 PPIS29.65-24-2 dc7f7b release-keys'"
+BUILD_FINGERPRINT := motorola/doha_retail/doha:$(VENDOR_RELEASE)
+PRIVATE_BUILD_DESC := "'doha_retail-user 10 PPIS29.65-24-2 dc7f7b release-keys'"
 
 #PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-11-01
 
