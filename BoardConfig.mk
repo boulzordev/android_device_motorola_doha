@@ -109,13 +109,13 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 include vendor/omni/sepolicy/sepolicy.mk
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+#    device/qcom/sepolicy/generic/public \
+#    device/qcom/sepolicy/qva/public
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/private \
-    device/qcom/sepolicy/qva/private
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+#    device/qcom/sepolicy/generic/private \
+#    device/qcom/sepolicy/qva/private
 
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp_policy
 
