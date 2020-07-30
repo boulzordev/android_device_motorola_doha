@@ -3,6 +3,7 @@ on init
     mount none /dev/null /vendor/overlay/FrameworkResVendor/FrameworkResVendor.apk bind
     mount none /dev/null /vendor/overlay/SysuiDarkTheme/SysuiDarkTheme.apk bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
+    mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
     setprop ro.carrier ${ro.boot.carrier}
     setprop ro.vendor.carrier ${ro.boot.carrier}
 
