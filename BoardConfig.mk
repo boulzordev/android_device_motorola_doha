@@ -61,7 +61,7 @@ TARGET_KERNEL_SOURCE := kernel/motorola/trinket
 TARGET_KERNEL_CONFIG := vendor/omni_doha_defconfig
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC=dtc
+    DTC=$(OUT_DIR)/../device/motorola/doha/dtc/dtc
 
 TARGET_KERNEL_VERSION := 4.14
 TARGET_KERNEL_CLANG_COMPILE := true
