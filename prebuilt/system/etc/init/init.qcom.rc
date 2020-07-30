@@ -6,6 +6,7 @@ on init
     mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
     setprop ro.carrier ${ro.boot.carrier}
     setprop ro.vendor.carrier ${ro.boot.carrier}
+    umount /oem
 
 on boot
     # FPC home button permissions
