@@ -1,10 +1,10 @@
 -framework/qcrilhook.jar
 -framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|4bec9be08fda90be078b5d0affe2a139cd941ea7
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -framework/QtiTelephonyServicelibrary.jar
 -app/embms/embms.apk
--app/datastatusnotification/datastatusnotification.apk
+-app/datastatusnotification/datastatusnotification.apk|e3d23fe34e157ee2cd899a3e2d7e556ad15f7907
 -priv-app/ims/ims.apk|efacc9fa87dc44f2773ea15ff124a66e0ef18cdd
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
@@ -98,7 +98,7 @@ lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.ims.rcsconfig@1.0.so
 lib64/vendor.qti.latency@2.0.so
 lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
+lib64/libimsmedia_jni.so|c2022aa067733944c88fd0d149db7f39bcc05128
 lib64/lib-imsvideocodec.so
 lib64/lib-imsvtextutils.so
 lib64/lib-imsvt.so
@@ -255,9 +255,6 @@ etc/permissions/privapp-permissions-com.motorola.vzw.pco.extensions.pcoreceiver.
 -priv-app/vzwPcoExt/vzwPcoExt.apk
 
 -priv-app/atfwd/atfwd.apk
-
--priv-app/daxService/daxService.apk
-
 
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
@@ -473,5 +470,5 @@ etc/permissions/com.motorola.frameworks.core.addon.xml
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 -framework/com.qti.snapdragon.sdk.display.jar
 
--app/MotoDolbyV3/MotoDolbyV3.apk
-
+lib64/librcc.so|2816e62cb0c3d71f6fab324964eafed6d25fad44
+lib64/vendor.qti.imsrtpservice@1.0.so|b52988a16415f8002132e2629ef777eda9a883cc
