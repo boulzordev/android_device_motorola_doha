@@ -472,3 +472,12 @@ etc/permissions/com.qti.snapdragon.sdk.display.xml
 
 lib64/librcc.so|2816e62cb0c3d71f6fab324964eafed6d25fad44
 lib64/vendor.qti.imsrtpservice@1.0.so|b52988a16415f8002132e2629ef777eda9a883cc
+
+-product/app/FMPlayer/FMPlayer.apk
+-app/FMRadioService/FMRadioService.apk|5c65ccde2eec7ec5e6b1742b8be90ea7fcc5d7bb
+lib64/libfm-hci.so
+lib64/fm_helium.so
+etc/permissions/com.motorola.software.fmradioservice.xml
+
+product/lib64/libsdm-disp-apis.qti.so
+product/lib64/libsd_sdk_display.qti.so

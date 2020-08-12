@@ -160,6 +160,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyalsa
 
+# FM
+PRODUCT_PACKAGES += \
+    libqcomfm_jni \
+    qcom.fmradio
+
+PRODUCT_BOOT_JARS += qcom.fmradio
 
 # TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
 PRODUCT_PACKAGES += \
